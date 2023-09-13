@@ -1,12 +1,12 @@
-package com.example.myapplicationsdafdaasdfsd
+package com.example.myapplicationsdafdaasdfsd.ui.main
 
-import android.app.AlertDialog
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
+import com.example.myapplicationsdafdaasdfsd.App
 import com.example.myapplicationsdafdaasdfsd.data.MainDb
 import com.example.myapplicationsdafdaasdfsd.data.NameEntity
 import kotlinx.coroutines.launch

@@ -1,15 +1,11 @@
 package com.example.myapplicationsdafdaasdfsd
 
 import androidx.compose.runtime.Composable
-import com.example.myapplicationsdafdaasdfsd.ui.MainScreen
+import com.example.myapplicationsdafdaasdfsd.ui.main.MainScreen
 import com.example.myapplicationsdafdaasdfsd.ui.NoteScreen
+import com.example.myapplicationsdafdaasdfsd.ui.main.MainViewModel
 
-@Composable
-fun Screen1(mainViewModel: MainViewModel, onClick: () -> Unit) {
-    MainScreen(mainViewModel, onClick)
-}
-
-@Composable
-fun Screen2(mainViewModel: MainViewModel) {
-    NoteScreen(mainViewModel)
+enum class Screens(val route: String) {
+    Main("main"),
+    Note("note")
 }

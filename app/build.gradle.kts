@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.myapplicationsdafdaasdfsd"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.myapplicationsdafdaasdfsd"
@@ -52,6 +52,7 @@ dependencies {
     implementation("androidx.room:room-ktx:2.5.2")
     implementation("androidx.room:room-common:2.5.2")
 
+    implementation("androidx.navigation:navigation-compose:2.7.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("androidx.core:core-ktx:1.8.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")

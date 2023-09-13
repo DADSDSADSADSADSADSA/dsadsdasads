@@ -54,12 +54,12 @@ import com.example.myapplicationsdafdaasdfsd.MainViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(
-    mainViewModel: MainViewModel = viewModel(factory = MainViewModel.factory)
+    mainViewModel: MainViewModel = viewModel(factory = MainViewModel.factory),
+    onClick: () -> Unit
 ) {
-
     val itemsList = mainViewModel.itemsList.collectAsState(initial = emptyList())
     Scaffold(
-        floatingActionButton = { MyFloatingActionButton() },
+        floatingActionButton = { MyFloatingActionButton(onClick) },
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -102,13 +102,14 @@ fun MainScreen(
             }
         }
     }
-
 }
 
 @Preview
 @Composable
-fun MyFloatingActionButton() {
-    FloatingActionButton(onClick = { }, containerColor = Color(android.graphics.Color.parseColor("#3b7ffc")), shape = CircleShape) {
+fun MyFloatingActionButton(onClick: () -> Unit) {
+    FloatingActionButton(onClick = {
+        onClick()
+    }, containerColor = Color(android.graphics.Color.parseColor("#3b7ffc")), shape = CircleShape) {
         Icon(imageVector = Icons.Filled.Add, contentDescription = "Favorite FAB", tint = Color.White)
     }
 }

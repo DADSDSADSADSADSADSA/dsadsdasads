@@ -7,5 +7,6 @@ import androidx.room.PrimaryKey
 data class NameEntity (
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
-    val name: String
+    val name: String,
+    val description: String
 )

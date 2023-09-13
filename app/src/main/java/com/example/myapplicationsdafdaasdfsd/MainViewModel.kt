@@ -14,10 +14,11 @@ import kotlinx.coroutines.launch
 class MainViewModel(val database: MainDb): ViewModel() {
     val itemsList = database.dao.getAllItems()
     var newText = mutableStateOf("")
+    var description = mutableStateOf("")
     var nameEntity: NameEntity? = null
 
     fun insertItem() = viewModelScope.launch {
-        val nameItem = nameEntity?.copy(name = newText.value) ?: NameEntity(name = newText.value)
+        val nameItem = nameEntity?.copy(name = newText.value) ?: NameEntity(name = newText.value, description=description.value)
         database.dao.insertItem(nameItem)
 
         nameEntity = null

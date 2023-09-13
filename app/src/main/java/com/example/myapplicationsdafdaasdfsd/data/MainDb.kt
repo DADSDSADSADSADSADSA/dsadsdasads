@@ -18,7 +18,7 @@ abstract class MainDb : RoomDatabase() {
             return Room.databaseBuilder(
                 context,
                 MainDb::class.java,
-                "test.db"
+                "test2.db"
             ).build()
         }
     }
